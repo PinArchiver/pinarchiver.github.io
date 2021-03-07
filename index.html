@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <meta charset="UTF-8">
+      <title>Pin Archiver</title>
+      <meta property="og:title" content="Pin Archiver Bot" />
+      <meta property="og:locale" content="en_US" />
+      <meta name="description" content="Pin Archiver Bot" />
+      <meta property="og:description" content="Pin Archiver Bot" />
+      <link rel="canonical" href="https://pinarchiver.xyz/" />
+      <meta property="og:url" content="https://pinarchiver.xyz/" />
+      <meta property="og:site_name" content="Pin Archiver" />
+      <meta name="twitter:card" content="summary" />
+      <meta property="twitter:title" content="Pin Archiver Bot" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="assets/css/style.css?v=0daab4e869add73e59f655121209b9e66a0ada16">
+      <link rel="icon" href="assets/favicon.ico" type="image/ico">
+   </head>
+   <body>
+      <section class="page-header">
+         <h1 class="project-name">Pin Archiver</h1>
+      </section>
+      <section class="main-content">
+         <h3 id="what-is-the-pin-archiver-bot-and-what-does-it-do">What is the Pin Archiver bot and what does it do?</h3>
+         <p>Pin Archiver is a robust Discord pin bot. It automatically saves pinned messages into a designated “pin board”, or archive channel. The saved messages are sent in a neat embed and can be delivered through the bot or a webhook.</p>
+         <h3 id="invite">Invite</h3>
+         <p><a href="https://pinarchiver.xyz/invite">Click here to invite Pin Archiver to your server!</a></p>
+         <h3 id="setting-up-the-bot">Setting up the bot</h3>
+         <ol>
+            <li>Create an archive channel. Typically you want to disable users’ Send Messages permission.</li>
+            <li><em>Optional:</em> Create a webhook in this channel by going to Edit Channel &gt; Integrations &gt; Webhooks &gt; New Webhook. Give it a nice name and profile picture.</li>
+            <li>Use the <code class="language-plaintext highlighter-rouge">.pin setarchive</code> command to set the channel/webhook as the archive. Example: <code class="language-plaintext highlighter-rouge">.pin setarchive #pins</code> or <code class="language-plaintext highlighter-rouge">.pin setarchive https://discordapp.com/api/webhooks/123456789/qwertyuiop123456789asdfghjklzxcvbnm</code> ⚠️Warning: Please be cautious to not publicly share your webhook URL. If someone gets ahold of your webhook URL, they can send unwanted messages through the webhook. Run the command in a secret channel!⚠️</li>
+            <li>Set a pretty color for the archive embeds. Example: <code class="language-plaintext highlighter-rouge">.pin setcolor #be54d1</code>. Use <code class="language-plaintext highlighter-rouge">.pin color</code> to send a sample embed to test out the color.</li>
+            <li>Turn on automatic archiving for your desired channels. Example: Go into your #general and run <code class="language-plaintext highlighter-rouge">.pin set on</code></li>
+            <li>If you don’t want the archived messages to be kept in the actual Discord Pinned Messages, use <code class="language-plaintext highlighter-rouge">.pin setunpin on</code>. This is a <strong>server-wide</strong> setting.</li>
+            <li>If you have pinned messages in a channel that you want to archive, run <code class="language-plaintext highlighter-rouge">.pin archive</code> and it will archive all current pinned messages.</li>
+         </ol>
+         <h3 id="commands">Commands</h3>
+         <p>Note: Commands below “.pin info” can only be performed by whitelisted users/roles or users with the Manage Server permission.</p>
+         <ul>
+            <li><code class="language-plaintext highlighter-rouge">.pin help</code> — List commands</li>
+            <li><code class="language-plaintext highlighter-rouge">.pin info</code> — See info about this bot.</li>
+            <li><code class="language-plaintext highlighter-rouge">.pin setarchive [webhook|channel]</code> — Set what webhook or channel to archive pins to. Archive channel will be set to none if no webhook or channel is given.</li>
+            <li><code class="language-plaintext highlighter-rouge">.pin set &lt;on/off&gt;</code> — Enable/disable archiving from this channel</li>
+            <li><code class="language-plaintext highlighter-rouge">.pin status</code> — Check if archiving is enabled for this channel</li>
+            <li><code class="language-plaintext highlighter-rouge">.pin setunpin &lt;on/off&gt;</code> — Toggle whether or not the bot unpins a message after archiving it</li>
+            <li><code class="language-plaintext highlighter-rouge">.pin checkunpin</code> — Check if automatic unpinning is enabled for this server</li>
+            <li><code class="language-plaintext highlighter-rouge">.pin archive [channel]</code> — Archive all current pins in channel. The sent command’s channel’s pins will be archived if no channel is specified.</li>
+            <li><code class="language-plaintext highlighter-rouge">.pin force &lt;message id&gt;</code> — Manually archive a message. This only works if sent in the same channel as the target message.</li>
+            <li><code class="language-plaintext highlighter-rouge">.pin setcolor &lt;hex&gt;</code> — Set the sidebar color on Pin Archiver embeds in the server</li>
+            <li><code class="language-plaintext highlighter-rouge">.pin color</code> — Returns the current color and sends a sample embed</li>
+            <li><code class="language-plaintext highlighter-rouge">.pin settings</code> — See the server’s settings</li>
+            <li><code class="language-plaintext highlighter-rouge">.pin whitelist &lt;add/remove&gt; &lt;role/user&gt;</code> — Manage the whitelist to execute restricted pin commands.</li>
+         </ul>
+      </section>
+   </body>
+</html>
