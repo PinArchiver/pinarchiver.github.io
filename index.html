@@ -15,6 +15,15 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="assets/css/style.css?v=0daab4e869add73e59f655121209b9e66a0ada16">
       <link rel="icon" href="assets/favicon.ico" type="image/ico">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script type="text/javascript">
+          $(window).on('load', function() {
+              $('#notice').modal('show');
+          });
+      </script>
    </head>
    <body>
       <section class="page-header">
@@ -51,5 +60,25 @@
             <li><code class="language-plaintext highlighter-rouge">.pin whitelist &lt;add/remove&gt; &lt;role/user&gt;</code> — Manage the whitelist to execute restricted pin commands.</li>
          </ul>
       </section>
+      <div class="modal fade" id="notice" tabindex="-1" role="dialog" aria-labelledby="noticeLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="noticeLabel">Important</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Pin Archiver will be <b>discontinued</b> in the near future. In anticipation of this, the bot no longer joins new Discord servers. If you are a current user of Pin Archiver, it is highly recommended that you switch to an alternative such as <a href="https://pinbot.xyz" target="_blank">https://pinbot.xyz</a> or <a href="https://passelbot.wixsite.com/home" target="_blank">https://passelbot.wixsite.com/home</a>. Thank you for your interest in this project.
+              <br><br>
+              <i>Note: Pin Archiver is in no way affiliated with the aforementioned alternatives.</i>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">I understand</button>
+            </div>
+          </div>
+        </div>
+      </div>
    </body>
 </html>
